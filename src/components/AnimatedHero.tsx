@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, MapPin, Star, Sparkles } from 'lucide-react';
 
 const AnimatedHero = () => {
@@ -92,14 +93,14 @@ const AnimatedHero = () => {
 
           {/* CTA Buttons with hover effects */}
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 transform transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <button className="group relative bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg flex items-center space-x-2 transform hover:scale-105 hover:shadow-2xl">
+            <Link to="/minecraft-hosting" className="group relative bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg flex items-center space-x-2 transform hover:scale-105 hover:shadow-2xl">
               <span>Get Started Free</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-xl transition-opacity"></div>
-            </button>
-            <button className="group text-white border-2 border-gray-600 hover:border-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold text-lg transform hover:scale-105 hover:bg-white/10">
+            </Link>
+            <Link to="#pricing" className="group text-white border-2 border-gray-600 hover:border-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold text-lg transform hover:scale-105 hover:bg-white/10">
               View Pricing
-            </button>
+            </Link>
           </div>
 
           {/* Animated stats */}

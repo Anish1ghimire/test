@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Check, MapPin, Star } from 'lucide-react';
 
 interface Feature {
@@ -61,13 +62,13 @@ const PageLayout: React.FC<PageLayoutProps> = ({
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg flex items-center space-x-2">
+              <Link to="/contact-us" className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg flex items-center space-x-2">
                 <span>Get Started Now</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="text-white border border-gray-600 hover:border-white px-8 py-4 rounded-lg transition-all duration-200 font-semibold text-lg">
+              </Link>
+              <Link to="/#pricing" className="text-white border border-gray-600 hover:border-white px-8 py-4 rounded-lg transition-all duration-200 font-semibold text-lg text-center">
                 View Pricing
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -152,7 +153,9 @@ const PageLayout: React.FC<PageLayoutProps> = ({
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700' 
                     : 'bg-gray-700 text-white hover:bg-gray-600'
                 }`}>
-                  Get Started
+                  <Link to="/contact-us" className="block w-full h-full">
+                    Get Started
+                  </Link>
                 </button>
               </div>
             ))}

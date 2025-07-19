@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Check, Cpu, HardDrive, Wifi, MapPin, Star, Shield, Zap, Users, Award, Globe, Headphones, Clock, Heart } from 'lucide-react';
 
 const PricingSection = () => {
@@ -346,7 +347,7 @@ const PricingSection = () => {
     <section className="py-24 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div id="pricing" className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Choose Your Perfect{' '}
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -440,16 +441,33 @@ const PricingSection = () => {
               </h3>
               <p className="text-gray-300 mb-6 text-lg">
                 Join thousands of satisfied customers who trust us with their hosting needs. 
-                Get started today with our 30-day money-back guarantee.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg flex items-center justify-center space-x-2 transform hover:scale-105">
+                <Link to="/minecraft-hosting" className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg flex items-center justify-center space-x-2 transform hover:scale-105">
                   <span>Start Your Free Trial</span>
                   <Star className="h-5 w-5 group-hover:rotate-12 transition-transform" />
-                </button>
+                </Link>
+                <Link to="/contact-us" className="text-white border-2 border-gray-600 hover:border-white px-8 py-4 rounded-xl transition-all duration-200 font-semibold text-lg hover:bg-white/10 text-center">
+                  Contact Sales Team
+                </Link>
                 <button className="text-white border-2 border-gray-600 hover:border-white px-8 py-4 rounded-xl transition-all duration-200 font-semibold text-lg hover:bg-white/10">
                   Contact Sales Team
-                </button>
+                <Link to="/minecraft-hosting" className="block w-full h-full">
+                  Get Started
+                <Link to="/intel-vps" className="block w-full h-full">
+                  Get Started
+                <Link 
+                  to={
+                    plan.game === 'ARK' ? '/ark-hosting' :
+                    plan.game === 'FiveM' ? '/fivem-hosting' :
+                    plan.game === 'Rust' ? '/rust-hosting' :
+                    plan.game === 'CS:GO' ? '/minecraft-hosting' :
+                    plan.game === 'GMod' ? '/minecraft-hosting' :
+                    plan.game === 'Bot' ? '/bot-hosting' :
+                    '/minecraft-hosting'
+                  } 
+                  className="block w-full h-full"
+                >
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>

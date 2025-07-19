@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Zap, Shield, Users, HardDrive, Cpu, Globe } from 'lucide-react';
 import PageLayout from '../../components/PageLayout';
 

@@ -183,16 +183,16 @@ const EnhancedHeader = () => {
 
             {/* Right Side Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
-              <button className="text-gray-300 hover:text-white transition-colors hover:scale-105 transform duration-200">
+              <Link to="/minecraft-hosting" className="text-gray-300 hover:text-white transition-colors hover:scale-105 transform duration-200">
                 Try For Free
-              </button>
-              <button className="text-gray-300 hover:text-white transition-colors hover:scale-105 transform duration-200">
+              </Link>
+              <Link to="/contact-us" className="text-gray-300 hover:text-white transition-colors hover:scale-105 transform duration-200">
                 Login
-              </button>
-              <button className="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold transform hover:scale-105 hover:shadow-lg overflow-hidden group">
+              </Link>
+              <Link to="/minecraft-hosting" className="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold transform hover:scale-105 hover:shadow-lg overflow-hidden group">
                 <span className="relative z-10">Order Now</span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -227,11 +227,11 @@ const EnhancedHeader = () => {
                   ))}
                 </div>
                 <div className="pt-4 space-y-2">
-                  <button className="block w-full text-left text-gray-300 hover:text-white py-2 hover:translate-x-1 transition-all duration-200">Try For Free</button>
-                  <button className="block w-full text-left text-gray-300 hover:text-white py-2 hover:translate-x-1 transition-all duration-200">Login</button>
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold transform hover:scale-105">
+                  <Link to="/minecraft-hosting" className="block w-full text-left text-gray-300 hover:text-white py-2 hover:translate-x-1 transition-all duration-200">Try For Free</Link>
+                  <Link to="/contact-us" className="block w-full text-left text-gray-300 hover:text-white py-2 hover:translate-x-1 transition-all duration-200">Login</Link>
+                  <Link to="/minecraft-hosting" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold transform hover:scale-105 text-center block">
                     Order Now
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

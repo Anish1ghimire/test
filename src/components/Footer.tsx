@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Gamepad2, 
   Server, 
@@ -70,9 +71,32 @@ const Footer = () => {
                   'Palworld Hosting'
                 ].map((item, index) => (
                   <li key={index}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                    <Link 
+                      to={
+                        item === 'Minecraft Hosting' ? '/minecraft-hosting' :
+                        item === 'Ark Hosting' ? '/ark-hosting' :
+                        item === 'FiveM Hosting' ? '/fivem-hosting' :
+                        item === 'Terraria Hosting' ? '/terraria-hosting' :
+                        item === 'Rust Hosting' ? '/rust-hosting' :
+                        item === 'Valheim Hosting' ? '/valheim-hosting' :
+                        item === 'Palworld Hosting' ? '/palworld-hosting' :
+                        '#'
+                      } 
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                    >
+                      to={
+                        item === 'About Us' ? '/about-us' :
+                        item === 'Our Commitment' ? '/our-commitment' :
+                        item === 'Career' ? '/career' :
+                        item === 'Contact Us' ? '/contact-us' :
+                        item === 'Infrastructure' ? '/infrastructure' :
+                        item === 'Partnership' ? '/partnership' :
+                        '#'
+                      } 
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                    >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -86,34 +110,34 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
+                  <Link to="/intel-vps" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
                     <Cpu className="h-3 w-3 text-blue-400" />
                     <span>Intel VPS</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
+                  <Link to="/amd-vps" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
                     <Cpu className="h-3 w-3 text-red-400" />
                     <span>AMD VPS</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
+                  <Link to="/web-hosting" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
                     <Globe className="h-3 w-3 text-green-400" />
                     <span>Web Hosting</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
+                  <Link to="/bot-hosting" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
                     <Bot className="h-3 w-3 text-yellow-400" />
                     <span>Bot Hosting</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
+                  <Link to="/domain-selling" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2">
                     <Globe className="h-3 w-3 text-purple-400" />
                     <span>Domain Selling</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -154,9 +178,18 @@ const Footer = () => {
                       'Usage Policy'
                     ].map((item, index) => (
                       <li key={index}>
-                        <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                        <Link 
+                          to={
+                            item === 'Terms of Service' ? '/terms-of-service' :
+                            item === 'Privacy Policy' ? '/privacy-policy' :
+                            item === 'Refund Policy' ? '/refund-policy' :
+                            item === 'Usage Policy' ? '/usage-policy' :
+                            '#'
+                          } 
+                          className="text-gray-400 hover:text-white transition-colors text-sm"
+                        >
                           {item}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -180,9 +213,9 @@ const Footer = () => {
                   placeholder="Enter your email"
                   className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
                 />
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold">
+                <Link to="/contact-us" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold text-center">
                   Subscribe
-                </button>
+                </Link>
               </div>
             </div>
           </div>
