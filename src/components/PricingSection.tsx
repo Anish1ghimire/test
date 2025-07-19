@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Cpu, HardDrive, Wifi, MapPin, Star } from 'lucide-react';
+import { Check, Cpu, HardDrive, Wifi, MapPin, Star, Shield, Zap, Users, Award, Globe, Headphones, Clock, Heart } from 'lucide-react';
 
 const PricingSection = () => {
   const minecraftPlans = [
@@ -14,7 +14,8 @@ const PricingSection = () => {
         'Up to 10 Players',
         'Free Subdomain',
         'DDoS Protection',
-        'India-Based Servers'
+        'India-Based Servers',
+        'Basic Support'
       ]
     },
     {
@@ -29,7 +30,8 @@ const PricingSection = () => {
         'Free Domain',
         'Advanced DDoS Protection',
         'Plugin Support',
-        'India-Based Servers'
+        'India-Based Servers',
+        'Priority Support'
       ]
     },
     {
@@ -44,7 +46,24 @@ const PricingSection = () => {
         'Free Domain + SSL',
         'Premium Support',
         'Custom Plugins',
-        'India-Based Servers'
+        'India-Based Servers',
+        'Dedicated Manager'
+      ]
+    },
+    {
+      name: 'Ultimate',
+      price: '₹1,999',
+      period: '/month',
+      popular: false,
+      features: [
+        '16GB RAM',
+        '160GB SSD Storage',
+        'Unlimited Players',
+        'Multiple Domains',
+        '24/7 Premium Support',
+        'Custom Development',
+        'India-Based Servers',
+        'White-label Options'
       ]
     }
   ];
@@ -62,7 +81,8 @@ const PricingSection = () => {
         '50GB SSD',
         '1TB Bandwidth',
         'Full Root Access',
-        'India Location'
+        'India Location',
+        'Basic Monitoring'
       ]
     },
     {
@@ -78,7 +98,8 @@ const PricingSection = () => {
         'Unlimited Bandwidth',
         'Full Root Access',
         'Priority Support',
-        'India Location'
+        'India Location',
+        'Advanced Monitoring'
       ]
     },
     {
@@ -94,7 +115,25 @@ const PricingSection = () => {
         'Unlimited Bandwidth',
         'Dedicated IP',
         '24/7 Premium Support',
-        'India Location'
+        'India Location',
+        'Custom Configurations'
+      ]
+    },
+    {
+      name: 'VPS Ultimate',
+      type: 'AMD',
+      price: '₹4,999',
+      period: '/month',
+      popular: false,
+      features: [
+        '16 vCPU AMD EPYC',
+        '32GB RAM',
+        '500GB NVMe SSD',
+        'Unlimited Bandwidth',
+        'Multiple IPs',
+        'Managed Services',
+        'India Location',
+        'Enterprise Support'
       ]
     }
   ];
@@ -111,7 +150,8 @@ const PricingSection = () => {
         'Up to 20 Players',
         'Mod Support',
         'Auto Backups',
-        'India Servers'
+        'India Servers',
+        'Basic Support'
       ]
     },
     {
@@ -125,7 +165,8 @@ const PricingSection = () => {
         'Up to 64 Players',
         'Script Support',
         'MySQL Database',
-        'India Servers'
+        'India Servers',
+        'Priority Support'
       ]
     },
     {
@@ -139,11 +180,113 @@ const PricingSection = () => {
         'Up to 100 Players',
         'Oxide Support',
         'Auto Wipes',
-        'India Servers'
+        'India Servers',
+        'Community Support'
+      ]
+    },
+    {
+      name: 'CS:GO Server',
+      price: '₹699',
+      period: '/month',
+      game: 'CS:GO',
+      features: [
+        '4GB RAM',
+        '40GB SSD',
+        'Up to 32 Players',
+        'SourceMod Support',
+        'Fast Tick Rate',
+        'India Servers',
+        'Anti-Cheat'
+      ]
+    },
+    {
+      name: 'Garry\'s Mod',
+      price: '₹899',
+      period: '/month',
+      game: 'GMod',
+      features: [
+        '6GB RAM',
+        '60GB SSD',
+        'Up to 40 Players',
+        'Workshop Support',
+        'Custom Addons',
+        'India Servers',
+        'FastDL Support'
+      ]
+    },
+    {
+      name: 'Discord Bot',
+      price: '₹299',
+      period: '/month',
+      game: 'Bot',
+      features: [
+        '1GB RAM',
+        '20GB SSD',
+        '24/7 Uptime',
+        'Multiple Bots',
+        'Auto Restart',
+        'India Servers',
+        'Dashboard Access'
       ]
     }
   ];
 
+  const whyChooseFeatures = [
+    {
+      icon: <Shield className="h-8 w-8 text-white" />,
+      title: '99.9% Uptime Guarantee',
+      description: 'Rock-solid infrastructure with redundant systems ensuring your services stay online.',
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      icon: <Zap className="h-8 w-8 text-white" />,
+      title: 'Lightning Fast Performance',
+      description: 'NVMe SSDs, latest CPUs, and optimized networks for unmatched speed.',
+      color: 'from-yellow-500 to-orange-600'
+    },
+    {
+      icon: <Users className="h-8 w-8 text-white" />,
+      title: '24/7 Expert Support',
+      description: 'Round-the-clock technical support from experienced professionals.',
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
+      icon: <MapPin className="h-8 w-8 text-white" />,
+      title: 'India-Based Infrastructure',
+      description: 'Low latency servers located across major Indian cities for optimal performance.',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      icon: <Award className="h-8 w-8 text-white" />,
+      title: 'Industry Leading Security',
+      description: 'Advanced DDoS protection, firewalls, and security monitoring.',
+      color: 'from-red-500 to-rose-600'
+    },
+    {
+      icon: <Globe className="h-8 w-8 text-white" />,
+      title: 'Scalable Solutions',
+      description: 'Easily upgrade your resources as your needs grow without downtime.',
+      color: 'from-indigo-500 to-blue-600'
+    },
+    {
+      icon: <Headphones className="h-8 w-8 text-white" />,
+      title: 'Free Migration Service',
+      description: 'We handle the complete migration of your existing services at no cost.',
+      color: 'from-teal-500 to-green-600'
+    },
+    {
+      icon: <Clock className="h-8 w-8 text-white" />,
+      title: 'Instant Setup',
+      description: 'Get your servers deployed and running within minutes of ordering.',
+      color: 'from-orange-500 to-red-600'
+    },
+    {
+      icon: <Heart className="h-8 w-8 text-white" />,
+      title: 'Customer-First Approach',
+      description: 'Your success is our priority. We go above and beyond for every customer.',
+      color: 'from-pink-500 to-purple-600'
+    }
+  ];
   const PricingCard = ({ plan, type = 'default' }: { plan: any, type?: string }) => (
     <div className={`relative bg-gray-800/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-xl p-6 hover:bg-gray-800/70 transition-all duration-200 group`}>
       {plan.popular && (
@@ -234,7 +377,7 @@ const PricingSection = () => {
             <h3 className="text-2xl font-bold text-white mb-2">VPS Hosting</h3>
             <p className="text-gray-400">Powerful virtual private servers with Intel and AMD processors</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {vpsPlans.map((plan, index) => (
               <PricingCard key={index} plan={plan} type="vps" />
             ))}
@@ -247,13 +390,71 @@ const PricingSection = () => {
             <h3 className="text-2xl font-bold text-white mb-2">Other Game Hosting</h3>
             <p className="text-gray-400">Specialized hosting for popular multiplayer games</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
             {gameHostingPlans.map((plan, index) => (
               <PricingCard key={index} plan={plan} type="game" />
             ))}
           </div>
         </div>
       </div>
+
+      {/* Why Choose Our Services Section */}
+      <section className="py-24 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Why Choose{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Our Services?
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              We're not just another hosting provider. Here's what makes us the preferred choice for thousands of customers across India.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseFeatures.map((feature, index) => (
+              <div 
+                key={index} 
+                className="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:bg-gray-900/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Ready to Experience the Difference?
+              </h3>
+              <p className="text-gray-300 mb-6 text-lg">
+                Join thousands of satisfied customers who trust us with their hosting needs. 
+                Get started today with our 30-day money-back guarantee.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg flex items-center justify-center space-x-2 transform hover:scale-105">
+                  <span>Start Your Free Trial</span>
+                  <Star className="h-5 w-5 group-hover:rotate-12 transition-transform" />
+                </button>
+                <button className="text-white border-2 border-gray-600 hover:border-white px-8 py-4 rounded-xl transition-all duration-200 font-semibold text-lg hover:bg-white/10">
+                  Contact Sales Team
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
