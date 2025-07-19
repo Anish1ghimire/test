@@ -1,6 +1,8 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import LoadingScreen from './components/LoadingScreen';
+import EnhancedHeader from './components/EnhancedHeader';
 import Home from './pages/Home';
 import MinecraftHosting from './pages/game-hosting/MinecraftHosting';
 import ArkHosting from './pages/game-hosting/ArkHosting';
@@ -27,9 +29,19 @@ import UsagePolicy from './pages/legal/UsagePolicy';
 import Footer from './components/Footer';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
+
   return (
     <div className="min-h-screen bg-gray-900">
-      <Header />
+      <EnhancedHeader />
       <Routes>
         <Route path="/" element={<Home />} />
         
