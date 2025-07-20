@@ -84,17 +84,6 @@ const Footer = () => {
                       } 
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
-                      to={
-                        item === 'About Us' ? '/about-us' :
-                        item === 'Our Commitment' ? '/our-commitment' :
-                        item === 'Career' ? '/career' :
-                        item === 'Contact Us' ? '/contact-us' :
-                        item === 'Infrastructure' ? '/infrastructure' :
-                        item === 'Partnership' ? '/partnership' :
-                        '#'
-                      } 
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
-                    >
                       {item}
                     </Link>
                   </li>
